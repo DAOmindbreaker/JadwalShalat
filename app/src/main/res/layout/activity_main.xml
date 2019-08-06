@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"
+        android:padding="@dimen/padding"
+        tools:context=".MainActivity" android:orientation="vertical">
+
+        <Spinner
+                android:id="@+id/kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tv_tanggal"
+                android:text="Tanggal"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                    android:text="Subuh"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:textColor="@android:color/white"
+                    android:layout_width="@dimen/left_width"
+                    android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tv_subuh"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                    android:text="Dzuhur"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_width="@dimen/left_width"
+                    android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tv_dzuhur"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                    android:text="Ashar"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:layout_width="@dimen/left_width"
+                    android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tv_ashar"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+            android:text="Maghrib"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="@dimen/left_width"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tv_maghrib"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+            android:text="Isya"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="@dimen/left_width"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tv_isya"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+    </LinearLayout>
+
+
