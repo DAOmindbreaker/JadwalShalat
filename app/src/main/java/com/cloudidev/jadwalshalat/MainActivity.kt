@@ -1,11 +1,16 @@
 package com.cloudidev.jadwalshalat
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.cloudidev.jadwalshalat.Modules.Database.DatabaseHelper
+import com.cloudidev.jadwalshalat.Modules.ImportFromFile.Literation
+import com.cloudidev.jadwalshalat.Modules.ImportFromFile.LiterationInteractor
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -17,10 +22,16 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private var listKota: MutableList<Kota>? = null
     private var mKotaAdapter: ArrayAdapter<Kota>? = null
+    private lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        button = findViewById(R.id.button)
+        button.setOnClickListener {
+            startActivity(Intent(this, ListSurahActivity::class.java ))
+        }
 
         listKota = ArrayList<Kota>()
         mKotaAdapter = ArrayAdapter<Kota>(this, android.R.layout.simple_spinner_item, listKota as ArrayList<Kota>)
@@ -76,12 +87,12 @@ class MainActivity : AppCompatActivity() {
                 }
             })
             task.execute(url)
-        }catch (e:Exception) {
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }
 
-    fun loadKota () {
+    fun loadKota() {
         try {
             var url = "https://api.banghasan.com/sholat/format/json/kota"
             val task = ClientAsyncTask(this, object :
@@ -111,6 +122,41 @@ class MainActivity : AppCompatActivity() {
             task.execute(url)
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+
+
+        //Penambahan fitur optional baca Al-Qur'an
+        class MainActivity : AppCompatActivity(), Literation {
+
+            val interactor = LiterationInteractor(this, this)
+            val databaseHelper = DatabaseHelper(this)
+
+            override fun successInputDatabase() {
+                openNextActivity()
+            }
+
+            override fun failedInputDatabase() {
+                databaseHelper.clearTable()
+                interactor.setData()
+            }
+
+            override fun onCreate(savedInstanceState: Bundle?) {
+                super.onCreate(savedInstanceState)
+                setContentView(R.layout.activity_main)
+
+                if (databaseHelper.isDataAvailable()) {
+                    openNextActivity()
+                } else {
+                    databaseHelper.clearTable()
+                    interactor.setData()
+                }
+            }
+
+            fun openNextActivity() {
+                val intent = Intent(this, ListSurahActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
         }
     }
 }
