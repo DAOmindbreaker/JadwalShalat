@@ -1,4 +1,4 @@
-package com.dika.jadwalshalat
+package com.cloudidev.jadwalshalat
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.dika.jadwalshalat", appContext.packageName)
+        assertEquals("com.cloudidev.jadwalshalat", appContext.packageName)
     }
 }

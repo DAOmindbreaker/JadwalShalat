@@ -1,4 +1,4 @@
-package com.dika.jadwalshalat
+package com.cloudidev.jadwalshalat
 
 import android.app.Activity
 import android.content.Intent

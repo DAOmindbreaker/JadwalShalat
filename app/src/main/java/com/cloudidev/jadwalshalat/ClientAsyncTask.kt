@@ -1,4 +1,4 @@
-package com.dika.jadwalshalat
+package com.cloudidev.jadwalshalat
 
 import android.content.Context
 import android.os.AsyncTask
