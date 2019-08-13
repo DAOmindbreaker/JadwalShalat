@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">JADWAL SHALAT</string>
+    <string name="app_name1">Al Quran</string>
     <string name="image_view_background_splash_screen">image view background splash screen</string>
     <string name="shalat">Shalat</string>
     <string name="yuk">Yuk</string>
+
+    //Aplikasi Cek Halal
+    <string name="nama_produk">Nama Produk</string>
+    <string name="nomor_sertifikat">Nomor Sertifikat</string>
+    <string name="produsen">Produsen</string>
+    <string name="berlaku_hingga">Berlaku Hingga</string>
+    <string name="cari_produk">Cari Produk</string>
 </resources>
